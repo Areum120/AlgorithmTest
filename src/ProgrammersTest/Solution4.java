@@ -14,9 +14,9 @@ public class Solution4 {
 	
 	int answer = 0;
 	//int[] a = {1,2,3,4,5,6,7,8,9,10};
-	int[] a = new int[3000];//배열 사이즈 생성
+	int[] a = new int[n];//배열 사이즈 생성
 				
-	for(int i=0; i<3000; i++) {
+	for(int i=0; i<=n; i++) {
 		a[i]= i+1; //1. 1~3000이하의 수 생성한 정수 배열 안에 넣기 3.랜덤으로 생성 안해도 됨
 		System.out.println(a[i]+",");
 		}
