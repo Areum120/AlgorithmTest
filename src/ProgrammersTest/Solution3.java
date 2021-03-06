@@ -14,8 +14,9 @@ Kim은 반드시 seoul 안에 포함되어 있습니다.
 */
 public class Solution3 {
 
-	
-	public static String solution(String[] seoul) {
+
+	//출력이 아닌 반환하는 걸로 고치기 answer 없애기
+	public String solution(String[] seoul) {
 	
 	String answer = "";
 
@@ -25,18 +26,19 @@ public class Solution3 {
 	
 	for(int i =0; i<seoul.length; i++) {
 		if(name.equals(seoul[i])) {
-			System.out.println("김서방은"+i+"에 있다");
+			answer = "김서방은"+i+"에 있다";
 		}
 	}
-	
 	return answer;
 	}
 	
 	public static void main(String[] args) {
 	
-	String[] findkim= {"Jane","Kim"};//배열 선언, 초기화	
+	Solution3 s3 = new Solution3();	
 	
-	solution(findkim);
+	String[] seoul = {"Jane","Kim"};
+	
+	System.out.println(s3.solution(seoul));//배열 선언, 초기화
 	
 	}
 	
