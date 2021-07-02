@@ -17,15 +17,27 @@
 # 3은 양의 정수의 제곱이 아니므로, -1을 리턴합니다.
 import math
 
+#소수점 제한하기
+# 1. round 함수를 통해서 소수점 자리수 반올림 하기
+# 2. format 서식 지정을 통해서 소수점 자리수 조절하기
+# 3. f-string 서식 지정을 통해서 소수점 자리수 제한하기
+
+
+# x = 3.350
+# x = "{:g}".format(x)#불필요한 0 제거하기
+# print(x)
 
 def solution(n):
     answer = 0
     x = 0
-    if x>=0:
-        x+= math.sqrt(n)#제곱근구하기
-        answer+= (x+1)**2
-    else:
-        answer+= -1
+    x = math.sqrt(n)#제곱근구하기
+    print(x)
+    if x-int(x)==0:#x가 정수이면
+        answer = int((x+1)**2)
+        print(answer)
+    else:#x가 정수가 아니면
+        answer = -1
     print(answer)
     return answer
+
 solution(121)
