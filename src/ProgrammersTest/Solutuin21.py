@@ -9,15 +9,15 @@
 
 answer=0
 num = 0
-while True:#반복문 계속 돌기
+while answer<100:#반복문 계속 돌기
     num+=1#1부터 계속 증가
     if num % 2==0:#짝수이면
         answer-=num#짝수를 계속 뺸다, answer = answer -0, answer = answer -2, answer = answer -4
     else:#홀수이면
         answer+=num#홀수를 계속 더한다, answer = answer + 1, answer = answer +3, answer = answer +5
-    if answer >= 100: #답이 100 이상이면
-        break#while문 나가기
-print(num, "까지 더하면 ", answer, "가 된다")
+    #if answer >= 100: #답이 100 이상이면
+    #    break#while문 나가기
+print(num, "까지 더하면 ", answer, "이 된다")
 
 
 
