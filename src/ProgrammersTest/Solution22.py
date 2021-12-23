@@ -46,6 +46,13 @@ def solution(array, command):
     print(answer)
     return answer
 
+    array = [1, 5, 2, 6, 3, 7, 4]
+    command = [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
+    # [i, j, k]
+    # i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수
+    # print(command[0][1]#첫번째 커맨드 요소 출력)
+    solution(array, command)
+
     '''
     의사코드 작성 및 중첩리스트 i,j번째 요소 출력 연습
     
@@ -66,12 +73,6 @@ def solution(array, command):
     # 오름차순 정렬
     # answer = command의 k번째 있는 수를 저장
     '''
-array = [1, 5, 2, 6, 3, 7, 4]
-command = [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
-# [i, j, k]
-# i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수
-# print(command[0][1]#첫번째 커맨드 요소 출력)
-solution(array, command)
 
 '''
  # 2,5,3만 출력해보는 연습
