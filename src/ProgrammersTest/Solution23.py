@@ -27,26 +27,28 @@ arr	return
 13의 모든 자릿수의 합은 4입니다. 13은 4로 나누어 떨어지지 않으므로 13은 하샤드 수가 아닙니다.
 '''
 
+
 def solution(x):
     # 하샤드 수 : x의 자릿수 합으로 x가 나누어 떨어져야 함
     # ex) 18의 자릿수 합은 1+8 = 9, 18을 9로 나누었을 때 나누어 떨어지므로 하샤드 수임
     # ex) 225의 자릿수 합은 2+2+5
-    # x를 10으로 나눈 나머지는?
-    quotient_10000 = x // 10000 #만자리 몫
-
-    quotient = x // 10 #몫, 첫째자리
-    remainder = x % 10 #나머지, 둘째자리
-    print(quotient)
-    print(remainder)
-    plus = quotient + remainder #두자릿수 더하기
-    print(plus)
-    if x % plus == 0:#두자릿수 더한 값을 나눈 나머지가 0일 때(나누어 떨어지면)
-        answer = True#answer는 x이며 true이다.
+    x_list = list(str(x))#문자+리스트형 변환
+    print(x_list)#['2','2','5']
+    all_num=0
+    for i in range(len(x_list)):
+        print(i)#0,1,2
+        print(x_list[i])#2, 2, 5
+        all_num = all_num + int(x_list[i])
+    print(all_num)
+    if x % all_num==0:
+        answer = True
         print(answer)
         return answer
     else:
-        answer = False#그렇지 않으면 false
+        answer = False
         print(answer)
         return answer
-
 solution(225)
+
+#10, 12 : 하샤드 수 True
+#11, 13 : 하샤드 수 False
