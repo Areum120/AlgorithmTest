@@ -37,21 +37,24 @@ def solution(arr, divisor):
         # print(arr[i])#1,2,3,4
         if arr[i] % divisor==0:#divisor로 나누었을 때 나머지가 0 : 나누어 떨어지면
             answer.append(arr[i])#배열에 담기
-        else:#모든 요소가 나누어떨어지지 않는다면
-            answer.append(-1)#-1 요소 한개만 반환한다(여기선 for문 안에 있어서 -1이 4개가 들어감)
+        else:#나누어떨어지지 않는 숫자가 있으면
+            answer.append(-1)#나누어 떨어지지 않는 숫자 갯수만큼 -1을 배열에 담기
     answer.sort()#answer 배열의 오름차순 정렬
-    # print(answer)
-    # return answer
-    for j in answer:
-        print(j)
-    # if -1 in answer:
-    #     answer=[-1]#answer요소 중에 -1이 있으면 -1 한개만 반환한다.
-    #     print(answer)
-    #     return answer
-    # else:
-    #     print(answer)
-    #     return answer
+    print(answer)#요소 확인
+    count = answer.count(-1)#-1인 요소 갯수
+    if count >=1 and count<len(arr):#-1의 갯수가 1보다 크고 arr 전체 갯수보다 작으면
+        while -1 in answer:#answer에 -1이 있는 동안
+            answer.remove(-1)#-1을 모두 제거
+        print(answer)
+        return answer
+    elif count==len(arr):#-1 갯수가 arr 전체 갯수와 같으면
+        answer=[-1]
+        print(answer)
+        return answer
+    elif count==0:#-1이 없으면 그냥 반환
+        print(answer)
+        return answer
 
-arr = [5, 9, 7, 10]
-divisor = 5
+arr = [1, 2, 3, 4]
+divisor = 3
 solution(arr, divisor)
