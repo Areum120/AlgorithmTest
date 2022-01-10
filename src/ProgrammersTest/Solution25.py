@@ -32,16 +32,16 @@ answers	return
 '''
 
 def solution(answers):
-    # 40개
-    # 정답 생성
+    # 정답지 갯수
     n = (len(answers))
     print(n)
     supoja1 = list(range(1, 6))
-    supoja1_list = supoja1* int(n/5)+supoja1[0:(n%5)]
+    # (답안지갯수*몫)+나머지
+    supoja1_list = supoja1* (n//5)+supoja1[0:(n%5)]#몫을 곱하면 int형 변환 안해도 됨
     supoja2 = [2, 1, 2, 3, 2, 4, 2, 5]
-    supoja2_list = supoja2* int(n/8)+supoja2[0:(n%8)]
+    supoja2_list = supoja2* (n//8)+supoja2[0:(n%8)]
     supoja3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
-    supoja3_list = supoja3* int(n/10)+supoja3[0:(n%10)]
+    supoja3_list = supoja3* (n//10)+supoja3[0:(n%10)]
     print(len(supoja1_list))
     print(len(supoja2_list))
     print(len(supoja3_list))
