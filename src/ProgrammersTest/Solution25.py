@@ -55,7 +55,7 @@ def solution(answers):
 #             print(same_list.append(i))
 #     print(same_list)
 #   방법2
-    same1 = [i for i, j in zip(supoja1_list, answers) if i==j]
+    same1 = [i for i, j in zip(supoja1_list, answers) if i == j]
     print(same1)
     print(len(same1))
 
