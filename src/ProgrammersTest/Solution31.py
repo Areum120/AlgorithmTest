@@ -28,6 +28,7 @@ def solution (n, s):
 #     s는 소문자 or 대문자 or 소문자+대문자 + 공백
 #
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    print(len(alphabet))
 
     # print(alphabet[0:1])#a
     # print(alphabet[1:2])#b
@@ -55,8 +56,14 @@ def solution (n, s):
     print(num)
     for k in num:
         # print(alphabet[k:k+1])
-        if #끝이 z일 때 처리는 어떻게 해야 할 지?
-        print(alphabet[k+n:(k+1)+n])
+        if (k+1)+n > 25:
+            change_num = (((k+1)+n)-25)-1
+        elif k+n > 25:
+            change_num = (((k + 1) + n) - 25) - 1
+            print()
+        else:
+        #끝이 z일 때 처리는 어떻게 해야 할 지? 알파벳 총 16개 0~25
+            print(alphabet[k+n:(k+1)+n])
 
 s = "a B z"
 n = 1
